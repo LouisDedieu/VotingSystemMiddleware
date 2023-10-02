@@ -1,12 +1,12 @@
 package impl;
 
-//Implémentation concrète de ClientService.
 import model.Candidate;
+import service.ClientService;
 
 import java.util.List;
 
-//Implémentation de ClientService
-public class ClientServiceImpl {
+//Implémentation concrète de ClientService.
+public class ClientServiceImpl implements ClientService {
     //Implémentation de getStudentNumber
     public String getStudentNumber() {
         return "123456789";
