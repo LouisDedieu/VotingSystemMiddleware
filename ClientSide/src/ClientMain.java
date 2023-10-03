@@ -1,7 +1,23 @@
-public class ClientMain {
+import impl.RMIClientImpl;
+import service.AuthenticationService;
 
-    //Point d'entrée pour le client. Il initialiserait l'UI, se connecterait au serveur, et permettrait les interactions utilisateur.
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
+
+public class ClientMain {
     public static void main(String[] args) {
-        // TODO
+        try {
+            Registry registry = LocateRegistry.getRegistry("localhost", 2001);
+            AuthenticationService authService = (AuthenticationService) registry.lookup("authenticationService");
+
+            RMIClientImpl clientStub = new RMIClientImpl();
+            authService.authenticate(clientStub);
+
+            // Suite de votre logique client...
+
+        } catch (Exception e) {
+            System.err.println("Client exception: " + e.toString());
+            e.printStackTrace();
+        }
     }
 }
