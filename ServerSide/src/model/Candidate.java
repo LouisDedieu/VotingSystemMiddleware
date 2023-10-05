@@ -3,11 +3,16 @@ package model;
 public class Candidate implements java.io.Serializable{
     private int rank;
     private String name;
-//    private Object pitch;
+    private Pitch pitch;
 
     public Candidate(int rank, String name) {
+        this(rank, name, null);
+    }
+
+    public Candidate(int rank, String name, Pitch pitch) {
         this.rank = rank;
         this.name = name;
+        this.pitch = pitch;
     }
 
     public int getRank() {
@@ -18,11 +23,13 @@ public class Candidate implements java.io.Serializable{
         return name;
     }
 
-//  public Object getPitch() {}
+    public Pitch getPitch() {
+        return pitch;
+    }
 
     @Override
     public String toString() {
-        return rank + " " + name;
+        return rank + " " + name + (pitch != null ? (" Pitch: " + pitch.present()) : "");
     }
 
     public void setRank(int rank) {
@@ -33,5 +40,7 @@ public class Candidate implements java.io.Serializable{
         this.name = name;
     }
 
-//  public void setPitch(Object pitch) {}
+    public void setPitch(Pitch pitch) {
+        this.pitch = pitch;
+    }
 }
