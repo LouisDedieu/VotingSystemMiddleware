@@ -1,18 +1,15 @@
 package model;
 
-//Répliquée côté client pour garantir que client et serveur ont une représentation cohérente des données.
-public class Candidate {
+public class Candidate implements java.io.Serializable{
     private int rank;
     private String name;
-    private Object pitch;
+//    private Object pitch;
 
-    public Candidate(int rank, String name, Object pitch) {
+    public Candidate(int rank, String name) {
         this.rank = rank;
         this.name = name;
-        this.pitch = pitch;
     }
 
-    //Getters
     public int getRank() {
         return rank;
     }
@@ -21,7 +18,20 @@ public class Candidate {
         return name;
     }
 
-    public Object getPitch() {
-        return pitch;
+//  public Object getPitch() {}
+
+    @Override
+    public String toString() {
+        return rank + " " + name;
     }
+
+    public void setRank(int rank) {
+        this.rank = rank;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+//  public void setPitch(Object pitch) {}
 }

@@ -1,10 +1,7 @@
 
-r	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ðÕ“ùüÿÿÿÿ8–Ú½»¯1
-Y
-java:S1854"<Remove this useless assignment to local variable "password".(Óååê8ŸÚ½»¯1
-c
-java:S1854"ARemove this useless assignment to local variable "studentNumber".(³¾úÃøÿÿÿÿ8ŸÚ½»¯1
-T
-java:S1481"2Remove this unused "studentNumber" local variable.(³¾úÃøÿÿÿÿ8¡Ú½»¯1
-J
-java:S1481"-Remove this unused "password" local variable.(Óååê8¢Ú½»¯1
+r	java:S117""QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ðÕ“ùüÿÿÿÿ8ŒãŽÕ¯1
+X	java:S125"<This block of commented-out lines of code should be removed.(Õîéû8¡óÀÕ¯1
+D
+java:S1128"'Remove this unused import 'model.User'.(˜Ð ñ8¦óÀÕ¯1
+O
+java:S1128"-Remove this unused import 'java.util.Random'.(èøÉ›ùÿÿÿÿ8§óÀÕ¯1

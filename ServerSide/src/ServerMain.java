@@ -6,15 +6,10 @@ import model.User;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.Naming;
+import java.util.Scanner;
 
 public class ServerMain {
     public static void main(String[] args) {
-        Candidate candidate1 = new Candidate(1, "candidate1");
-        Candidate candidate2 = new Candidate(2, "candidate2");
-
-        User user1 = new User("user1", "password1");
-        User user2 = new User("user2", "password2");
-        User user3 = new User("user3", "password3");
         try {
             // Instanciez l'objet distant pour l'authentification
             AuthenticationServiceImpl authService = new AuthenticationServiceImpl(10001);
@@ -29,7 +24,28 @@ public class ServerMain {
             Naming.rebind("rmi://localhost:2001/authenticationService", authService);
             Naming.rebind("rmi://localhost:2001/votingService", votingService);
 
-            System.out.println("Server is ready.");
+
+
+            Scanner scanner = new Scanner(System.in);
+            while (true) {
+                System.out.println("Entrez 'start' pour démarrer le vote, 'stop' pour arrêter, ou 'exit' pour quitter.");
+                String input = scanner.nextLine();
+                if ("start".equalsIgnoreCase(input)) {
+                    // Démarrer le vote
+                    votingService.startVoting();
+                    System.out.println("Vote démarré.");
+                } else if ("stop".equalsIgnoreCase(input)) {
+                    // Arrêter le vote
+                    votingService.stopVoting();
+                    System.out.println("Vote arrêté.");
+                } else if ("exit".equalsIgnoreCase(input)) {
+                    System.out.println("Fermeture du serveur.");
+                    System.exit(0);
+                } else {
+                    System.out.println("Commande non reconnue.");
+                }
+            }
+
         } catch (Exception e) {
             System.err.println("Server exception: " + e.toString());
             e.printStackTrace();

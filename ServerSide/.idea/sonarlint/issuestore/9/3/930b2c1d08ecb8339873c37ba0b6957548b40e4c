@@ -1,0 +1,8 @@
+
+m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ê«Ó8Şû©Õ¯1
+m	java:S117/"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹‘8Ç†ÕÔ¯1
+j	java:S116	"NRename this field "OTP" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çè®Ì8®ÎÔÔ¯1
+;
+java:S2119"Save and re-use this "Random".(Ê«Ó8‹ü©Õ¯1
+W
+java:S1128"5Remove this unused import 'java.rmi.RemoteException'.(Ä÷àÿÿÿÿÿ8…‡±Õ¯1

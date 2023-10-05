@@ -1,25 +1,9 @@
 
-[
-java:S1854"9Remove this useless assignment to local variable "user3".(ÃÊñŸşÿÿÿÿ8êù¨º¯1
-[
-java:S1854"9Remove this useless assignment to local variable "user2".(ò×Æ¨ùÿÿÿÿ8ëù¨º¯1
-V
-java:S1854"9Remove this useless assignment to local variable "user1".(¥ïóé8ëù¨º¯1
-`
-java:S1854">Remove this useless assignment to local variable "candidate2".(àƒ”ûÿÿÿÿ8ëù¨º¯1
-`
-java:S1854">Remove this useless assignment to local variable "candidate1".(Íñ§Èùÿÿÿÿ8ëù¨º¯1
-Q
-java:S1481"/Remove this unused "candidate1" local variable.(Íñ§Èùÿÿÿÿ8îù¨º¯1
-Q
-java:S1481"/Remove this unused "candidate2" local variable.(àƒ”ûÿÿÿÿ8ïù¨º¯1
-G
-java:S1481"*Remove this unused "user1" local variable.(¥ïóé8ğù¨º¯1
-L
-java:S1481"*Remove this unused "user2" local variable.(ò×Æ¨ùÿÿÿÿ8ñù¨º¯1
-L
-java:S1481"*Remove this unused "user3" local variable.(ÃÊñŸşÿÿÿÿ8òù¨º¯1
-L	java:S106 "+Replace this use of System.out by a logger.(ºŠºøÿÿÿÿ8öù¨º¯1
-L	java:S106""+Replace this use of System.err by a logger.(ôŒÇ´ÿÿÿÿÿ8÷ù¨º¯1
+L	java:S106"+Replace this use of System.out by a logger.(ºŠºøÿÿÿÿ8öù¨º¯1
+L	java:S106"+Replace this use of System.err by a logger.(ôŒÇ´ÿÿÿÿÿ8÷ù¨º¯1
+N
+java:S1128",Remove this unused import 'model.Candidate'.(©ŸƒÍÿÿÿÿÿ8­â‹Õ¯1
+D
+java:S1128"'Remove this unused import 'model.User'.(˜Ğ ñ8®â‹Õ¯1
 W
 java:S1128"5Remove this unused import 'java.rmi.RemoteException'.(Ä÷àÿÿÿÿÿ8øù¨º¯1

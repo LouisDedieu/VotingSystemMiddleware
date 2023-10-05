@@ -21,8 +21,6 @@ W
 'src/impl/AuthenticationServiceImpl.java,f\c\fc9cf013b30a55f5d3e60a67f64b492d544083e6
 V
 &src/service/AuthenticationService.java,b\c\bc5ea9346f7f891179cf61acba5039aff17d5e6a
-H
-src/impl/VotingStub.java,0\a\0a22273186cff9b855f8a852d5885063f70113be
 G
 src/rmi/VotingStub.java,5\3\53b3c1cc681a21fb93f59ec0b93a99c0fe2c7e08
 L
@@ -32,3 +30,5 @@ L
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
 H
 src/utils/UsersList.java,3\5\35fd5ff2621d26adb64d519fff0e7c8034de4890
+L
+src/utils/CandidateList.java,c\4\c432a41d14867be427d12a5bb388de8900da218e

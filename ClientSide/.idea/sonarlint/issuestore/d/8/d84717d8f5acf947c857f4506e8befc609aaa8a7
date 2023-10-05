@@ -1,0 +1,10 @@
+
+H
+java:S2160"+Override the "equals" method in this class.(‘Îˆü8Ö«ıÔ¯1
+u
+java:S1450"SRemove the "user" field and declare it as a local variable in the relevant methods.(’Ø¾ıÿÿÿÿ8Õ‡Õ¯1
+G	java:S106"+Replace this use of System.out by a logger.(ÀÒĞì8æ«ıÔ¯1
+G	java:S106"+Replace this use of System.out by a logger.(¤Õš¬8è«ıÔ¯1
+L	java:S106#"+Replace this use of System.out by a logger.(øºÑûúÿÿÿÿ8ñ«ıÔ¯1
+J
+java:S1068"(Remove this unused "user" private field.(’Ø¾ıÿÿÿÿ8¼ûşÔ¯1

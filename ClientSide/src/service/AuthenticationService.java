@@ -1,15 +1,17 @@
 package service;
 
-import model.Candidate;
+import exceptions.BadCredentialsException;
+import exceptions.HasAlreadyVotedException;
+import model.User;
 import rmi.RMIClient;
 import rmi.VotingStub;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
-import java.util.List;
+import java.security.Provider;
 
-//Définit les opérations que le serveur peut demander au client, comme obtenir le numéro d'étudiant ou afficher les candidats.
 public interface AuthenticationService extends Remote {
-    public void authenticate(RMIClient clientStub) throws RemoteException;
-    public VotingStub getVotingMaterial(String OTP) throws RemoteException;
+    void authenticate(RMIClient clientStub) throws RemoteException, BadCredentialsException;
+    VotingStub getVotingMaterial(String otp) throws RemoteException, HasAlreadyVotedException;
+    String generateOTP(String studentNumber) throws RemoteException;
 }

@@ -9,6 +9,10 @@ public class UsersList {
             new User("2018-00003-MN-2", "password2")
     };
 
+    public UsersList() {
+        // empty constructor
+    }
+
     public static User[] getUsers() {
         return users;
     }
@@ -20,5 +24,14 @@ public class UsersList {
             }
         }
         return false;
+    }
+
+    public User getUser(String studentNumber) {
+        for (User user : users) {
+            if (user.getStudentNumber().equals(studentNumber)) {
+                return user;
+            }
+        }
+        return null;
     }
 }
