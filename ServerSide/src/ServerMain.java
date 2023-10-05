@@ -15,7 +15,7 @@ public class ServerMain {
             AuthenticationServiceImpl authService = new AuthenticationServiceImpl(10001);
 
             // Instanciez l'objet distant pour le vote
-            VotingServiceImpl votingService = new VotingServiceImpl(10002);
+            VotingServiceImpl votingService = new VotingServiceImpl(10002, authService);
 
             // Créez le registre RMI sur le port spécifié
             LocateRegistry.createRegistry(2001);

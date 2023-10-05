@@ -1,8 +1,11 @@
 package impl;
+import model.Candidate;
 import model.User;
 import rmi.RMIClient;
 import java.rmi.server.UnicastRemoteObject;
 import java.rmi.RemoteException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class RMIClientImpl extends UnicastRemoteObject implements RMIClient {
@@ -11,7 +14,6 @@ public class RMIClientImpl extends UnicastRemoteObject implements RMIClient {
     private User user;
 
     public RMIClientImpl() throws RemoteException {
-        this.getListCandidate();
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter your student number: ");
@@ -19,10 +21,6 @@ public class RMIClientImpl extends UnicastRemoteObject implements RMIClient {
 
         System.out.print("Enter your password: ");
         password = scanner.nextLine();
-    }
-
-    private void getListCandidate() {
-
     }
 
     @Override
@@ -48,5 +46,25 @@ public class RMIClientImpl extends UnicastRemoteObject implements RMIClient {
     @Override
     public void setUser(User user) throws RemoteException {
         this.user = user;
+    }
+
+    @Override
+    public Map<Integer, Integer> getVotes(Candidate[] candidates) throws RemoteException{
+        Map<Integer, Integer> votes = new HashMap<>();
+        Scanner scanner = new Scanner(System.in);
+        for (Candidate candidate : candidates) {
+            System.out.print("Entrer une note pour entre 0 et 5 " + candidate.getName() + ": ");
+            int Note = scanner.nextInt();
+            votes.put(candidate.getRank(), Note);
+        }
+        return votes;
+    }
+
+    @Override
+    public String getOTP() throws RemoteException{
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter your OTP: ");
+        String OTP = scanner.nextLine();
+        return OTP;
     }
 }

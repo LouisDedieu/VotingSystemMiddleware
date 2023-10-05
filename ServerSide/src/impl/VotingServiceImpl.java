@@ -1,31 +1,58 @@
 package impl;
 
 import model.Candidate;
+import model.OTP;
+import rmi.RMIClient;
 import service.VotingService;
 import utils.CandidateList;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.time.LocalDateTime;
-import java.util.List;
 import java.util.Map;
 
 public class VotingServiceImpl extends UnicastRemoteObject implements VotingService {
     private LocalDateTime voteStartDate;
     private LocalDateTime voteEndDate;
     private boolean isVotingActive = false;
+    private final AuthenticationServiceImpl authService;
 
-    public VotingServiceImpl(int port) throws RemoteException {
+    public VotingServiceImpl(int port, AuthenticationServiceImpl authService) throws RemoteException {
         super(port);
+        this.authService = authService;
     }
-    
-    
 
     @Override
-    public void vote(String studentNumber, Map<Integer, Integer> votes, String OTP) throws RemoteException{
+    public void vote(RMIClient clientStub) throws RemoteException{
         if (!isVotingActive) {
-            throw new RemoteException("Le vote n'est pas actif actuellement.");
+            clientStub.displayMessage("Le vote n'est pas encore commencé");
+            return;
         }
+        if (voteEndDate != null && LocalDateTime.now().isAfter(voteEndDate)) {
+            clientStub.displayMessage("Le vote est terminé");
+            return;
+        }
+
+        //Apres s'etre connecter, on demande a l'utilisateur d'entrer son OTP pour pouvoir voter
+        String OTPEntered = clientStub.getOTP();
+        OTP OTPGeneratedForCurrentUser = authService.getOtpsList().getOTP(clientStub.getStudentNumber());
+
+        if (!OTPGeneratedForCurrentUser.equals(OTPEntered)) {
+            clientStub.displayMessage("OTP incorrect");
+            vote(clientStub);
+        }
+        if (OTPGeneratedForCurrentUser.isUsed()) {
+            clientStub.displayMessage("Vous avez déjà voté");
+            return;
+        }
+
+        Map<Integer, Integer> votes = clientStub.getVotes(CandidateList.getCandidates());
+        clientStub.displayMessage("Vous avez voté pour :");
+        for (Map.Entry<Integer, Integer> vote : votes.entrySet()) {
+            clientStub.displayMessage("Candidat " + vote.getKey() + " : " + vote.getValue());
+        }
+        OTPGeneratedForCurrentUser.markAsUsed();
+        clientStub.displayMessage("Merci d'avoir voté");
     }
 
     @Override

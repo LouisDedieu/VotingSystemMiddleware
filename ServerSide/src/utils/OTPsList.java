@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class OTPsList {
-    private Map<String, OTP> otps;
+    private static Map<String, OTP> otps;
 
     public OTPsList() {
         this.otps = new HashMap<>();

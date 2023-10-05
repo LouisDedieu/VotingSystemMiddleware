@@ -5,6 +5,7 @@ import service.VotingService;
 
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
+import java.util.Map;
 
 public class ClientMain {
     public static void main(String[] args) {
@@ -22,6 +23,7 @@ public class ClientMain {
 
             RMIClientImpl clientStub = new RMIClientImpl();
             authService.authenticate(clientStub);
+            votingService.vote(clientStub);
 
             // Suite de votre logique client...
 

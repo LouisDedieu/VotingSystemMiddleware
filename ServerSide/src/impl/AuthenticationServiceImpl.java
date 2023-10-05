@@ -66,4 +66,8 @@ public class AuthenticationServiceImpl extends UnicastRemoteObject implements Au
 //        }
         return null;
     }
+
+    public OTPsList getOtpsList() {
+        return otpsList;
+    }
 }
