@@ -27,10 +27,6 @@ public class ClientMain {
 
             RMIClientImpl clientStub = new RMIClientImpl();
             authService.authenticate(clientStub); // L'utilisateur est authentifié et reçoit un OTP
-
-            String studentnumber = clientStub.getStudentNumber(); // L'utilisateur entre son numéro d'étudiant
-
-            // Obtention et soumission des votes
             votingService.vote(clientStub);
 
         } catch (Exception e) {

@@ -1,4 +1,4 @@
-package model;
+package model.candidate;
 
 public class TextPitch implements Pitch {
     private String content;
