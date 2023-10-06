@@ -29,13 +29,8 @@ public class ClientMain {
             authService.authenticate(clientStub); // L'utilisateur est authentifié et reçoit un OTP
 
             String studentnumber = clientStub.getStudentNumber(); // L'utilisateur entre son numéro d'étudiant
-            String userOTP = clientStub.getOTP(); // L'utilisateur entre son OTP
-
-            // Obtenez le matériel de vote en fournissant l'OTP
-            VotingStub votingMaterial = authService.getVotingMaterial(userOTP); // Cette méthode doit gérer l'exception HasAlreadyVotedException
 
             // Obtention et soumission des votes
-            //Map<Candidate, Integer> votes = getUserVotes(candidates);
             votingService.vote(clientStub);
 
         } catch (Exception e) {

@@ -23,10 +23,11 @@ public class VotingServiceImpl extends UnicastRemoteObject implements VotingServ
     }
 
     @Override
-    public void vote(RMIClient clientStub) throws RemoteException{
+    public void vote(RMIClient clientStub) throws RemoteException, InterruptedException {
         if (!isVotingActive) {
             clientStub.displayMessage("Le vote n'est pas encore commencé");
-            return;
+            Thread.sleep(5000); // Attend 5 secondes
+            vote(clientStub);
         }
         if (voteEndDate != null && LocalDateTime.now().isAfter(voteEndDate)) {
             clientStub.displayMessage("Le vote est terminé");
@@ -37,7 +38,7 @@ public class VotingServiceImpl extends UnicastRemoteObject implements VotingServ
         String OTPEntered = clientStub.getOTP();
         OTP OTPGeneratedForCurrentUser = authService.getOtpsList().getOTP(clientStub.getStudentNumber());
 
-        if (!OTPGeneratedForCurrentUser.equals(OTPEntered)) {
+        if (!OTPGeneratedForCurrentUser.getOtpValue().equals(OTPEntered)) {
             clientStub.displayMessage("OTP incorrect");
             vote(clientStub);
         }
@@ -53,6 +54,7 @@ public class VotingServiceImpl extends UnicastRemoteObject implements VotingServ
         }
         OTPGeneratedForCurrentUser.markAsUsed();
         clientStub.displayMessage("Merci d'avoir voté");
+        return;
     }
 
     @Override

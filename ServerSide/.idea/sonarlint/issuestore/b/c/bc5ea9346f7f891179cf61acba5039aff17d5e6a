@@ -1,6 +1,5 @@
 
-m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(À«ˆ‘8—ñÃÔ¯1
 D
-java:S1128"'Remove this unused import 'model.User'.(˜Ğ ñ8æÈ¤Õ¯1
+java:S1128"'Remove this unused import 'model.User'.(˜Ğ ñ8Èôôø¯1
 U
-java:S1128"3Remove this unused import 'java.security.Provider'.(×„áãøÿÿÿÿ8®ĞˆÕ¯1
+java:S1128"3Remove this unused import 'java.security.Provider'.(×„áãøÿÿÿÿ8Èôôø¯1

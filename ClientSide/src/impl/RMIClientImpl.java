@@ -54,8 +54,12 @@ public class RMIClientImpl extends UnicastRemoteObject implements RMIClient {
         Scanner scanner = new Scanner(System.in);
         for (Candidate candidate : candidates) {
             System.out.print("Entrer une note pour entre 0 et 5 " + candidate.getName() + ": ");
-            int Note = scanner.nextInt();
-            votes.put(candidate.getRank(), Note);
+            int note = scanner.nextInt();
+            while (note < 0 || note > 5) {
+                System.out.print("Entrer une note pour entre 0 et 5 " + candidate.getName() + ": ");
+                note = scanner.nextInt();
+            }
+            votes.put(candidate.getRank(), note);
         }
         return votes;
     }

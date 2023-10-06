@@ -32,3 +32,7 @@ H
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
 L
 src/utils/CandidateList.java,c\4\c432a41d14867be427d12a5bb388de8900da218e
+B
+src/model/OTP.java,c\5\c59405dd7f66fbdf0cb0ef356803d7193a2819f1
+G
+src/utils/OTPsList.java,f\2\f2d519a6d343dec5279a8f924207348614f48594
