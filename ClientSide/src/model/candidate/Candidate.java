@@ -1,4 +1,4 @@
-package model;
+package model.candidate;
 
 public class Candidate implements java.io.Serializable{
     private int rank;
