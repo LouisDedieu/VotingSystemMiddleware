@@ -1,4 +1,4 @@
-package model;
+package model.candidate;
 
 public class VideoPitch implements Pitch {
     private String videoUrl;

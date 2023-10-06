@@ -1,13 +1,10 @@
 import impl.RMIClientImpl;
-import model.Candidate;
-import rmi.VotingStub;
+import model.candidate.Candidate;
 import service.AuthenticationService;
 import service.VotingService;
 
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
-import java.util.Map;
-import java.util.Scanner;
 
 import static utils.RMIUtils.*;
 

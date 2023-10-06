@@ -1,6 +1,6 @@
 package impl;
-import model.Candidate;
-import model.User;
+import model.candidate.Candidate;
+import model.user.User;
 import rmi.RMIClient;
 import java.rmi.server.UnicastRemoteObject;
 import java.rmi.RemoteException;
@@ -47,6 +47,7 @@ public class RMIClientImpl extends UnicastRemoteObject implements RMIClient {
     public void setUser(User user) throws RemoteException {
         this.user = user;
     }
+
 
     @Override
     public Map<Integer, Integer> getVotes(Candidate[] candidates) throws RemoteException{

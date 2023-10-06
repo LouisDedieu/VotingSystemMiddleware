@@ -1,7 +1,7 @@
 package rmi;
 
-import model.Candidate;
-import model.User;
+import model.candidate.Candidate;
+import model.user.User;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
