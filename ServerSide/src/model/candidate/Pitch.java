@@ -1,4 +1,4 @@
-package model;
+package model.candidate;
 
 public interface Pitch {
     String present();

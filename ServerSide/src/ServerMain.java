@@ -1,10 +1,7 @@
 import impl.AuthenticationServiceImpl;
 import impl.VotingServiceImpl;
-import model.Candidate;
-import model.User;
 import utils.Command;
 
-import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.Naming;
 import java.util.Scanner;

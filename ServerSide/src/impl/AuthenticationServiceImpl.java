@@ -2,19 +2,16 @@ package impl;
 
 import exceptions.BadCredentialsException;
 import exceptions.HasAlreadyVotedException;
-import model.OTP;
-import model.User;
+import model.user.OTP;
 import rmi.RMIClient;
 import rmi.VotingStub;
 import service.AuthenticationService;
-import utils.OTPsList;
-import utils.UsersList;
+import utils.list.OTPsList;
+import utils.list.UsersList;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.Random;
-
-import static utils.RMIUtils.RMI_PORT;
 
 public class AuthenticationServiceImpl extends UnicastRemoteObject implements AuthenticationService {
     private UsersList usersList;

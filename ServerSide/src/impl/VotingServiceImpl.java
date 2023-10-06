@@ -1,10 +1,10 @@
 package impl;
 
-import model.Candidate;
-import model.OTP;
+import model.candidate.Candidate;
+import model.user.OTP;
 import rmi.RMIClient;
 import service.VotingService;
-import utils.CandidateList;
+import utils.list.CandidateList;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
@@ -33,7 +33,7 @@ public class VotingServiceImpl extends UnicastRemoteObject implements VotingServ
             return;
         }
 
-        //Apres s'etre connecter, on demande a l'utilisateur d'entrer son OTP pour pouvoir voter
+        //Apres s'être connecté, on demande a l'utilisateur d'entrer son OTP pour pouvoir voter
         String OTPEntered = clientStub.getOTP();
         OTP OTPGeneratedForCurrentUser = authService.getOtpsList().getOTP(clientStub.getStudentNumber());
 
