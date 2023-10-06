@@ -1,10 +1,12 @@
 
+r	java:S1179"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘î«øÿÿÿÿ8Öîîø¯1
+r	java:S117C"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğ‰óıÿÿÿÿ8æîîø¯1
+}
+java:S1488C"[Immediately return this expression instead of assigning it to the temporary variable "OTP".(ğ‰óıÿÿÿÿ8öîîø¯1
 H
-java:S2160"+Override the "equals" method in this class.(‘Îˆü8Ö«ıÔ¯1
-u
-java:S1450"SRemove the "user" field and declare it as a local variable in the relevant methods.(’Ø¾ıÿÿÿÿ8Õ‡Õ¯1
-G	java:S106"+Replace this use of System.out by a logger.(ÀÒĞì8æ«ıÔ¯1
-G	java:S106"+Replace this use of System.out by a logger.(¤Õš¬8è«ıÔ¯1
-L	java:S106#"+Replace this use of System.out by a logger.(øºÑûúÿÿÿÿ8ñ«ıÔ¯1
-J
-java:S1068"(Remove this unused "user" private field.(’Ø¾ıÿÿÿÿ8¼ûşÔ¯1
+java:S2160"+Override the "equals" method in this class.(‘Îˆü8•ïîø¯1
+G	java:S106"+Replace this use of System.out by a logger.(ÀÒĞì8¦ïîø¯1
+G	java:S106"+Replace this use of System.out by a logger.(¤Õš¬8§ïîø¯1
+L	java:S106+"+Replace this use of System.out by a logger.(øºÑûúÿÿÿÿ8µïîø¯1
+L	java:S1068"+Replace this use of System.out by a logger.(È¬ë€úÿÿÿÿ8Åïîø¯1
+G	java:S106B"+Replace this use of System.out by a logger.(‹¸¿ı8Çïîø¯1

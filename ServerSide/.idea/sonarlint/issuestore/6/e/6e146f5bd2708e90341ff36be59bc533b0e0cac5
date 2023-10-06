@@ -1,4 +1,11 @@
 
-]	java:S125"<This block of commented-out lines of code should be removed.(ÓºÙûÿÿÿÿ8¡®¢ş®1
-L
-java:S1128"*Remove this unused import 'java.util.Map'.(¼è½Òşÿÿÿÿ8²ü‡º¯1
+m	java:S117%"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æËÛÕ8şŸÜù¯1
+r	java:S117&"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰é£ıÿÿÿÿ8ÿŸÜù¯1
+H
+java:S2160"+Override the "equals" method in this class.(ÌæÅ8ˆ Üù¯1
+y
+java:S1450"\Remove the "voteStartDate" field and declare it as a local variable in the relevant methods.(ÌÄ‚Ì8‰ Üù¯1
+r
+java:S2159("VRemove this call to "equals"; comparisons between unrelated types always return false.(‘–ùb8Œ Üù¯1
+N
+java:S1068"1Remove this unused "voteStartDate" private field.(ÌÄ‚Ì8 Üù¯1

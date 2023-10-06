@@ -49,14 +49,20 @@ public class RMIClientImpl extends UnicastRemoteObject implements RMIClient {
         this.user = user;
     }
 
+
     @Override
     public Map<Integer, Vote> getVotes(Candidate[] candidates) throws RemoteException{
         Map<Integer, Vote> votes = new HashMap<>();
         Scanner scanner = new Scanner(System.in);
         for (Candidate candidate : candidates) {
             System.out.print("Entrer une note pour entre 0 et 5 " + candidate.getName() + ": ");
-            int Note = scanner.nextInt();
-            votes.put(candidate.getRank(), new Vote(candidate.getRank(), Note));
+
+            int note = scanner.nextInt();
+            while (note < 0 || note > 5) {
+                System.out.print("Entrer une note pour entre 0 et 5 " + candidate.getName() + ": ");
+                note = scanner.nextInt();
+            }
+            votes.put(candidate.getRank(), new Vote(candidate.getRank(), note));
         }
         return votes;
     }

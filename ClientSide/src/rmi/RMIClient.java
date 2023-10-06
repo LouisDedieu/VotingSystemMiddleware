@@ -3,7 +3,6 @@ package rmi;
 import model.candidate.Candidate;
 import model.user.User;
 import model.vote.Vote;
-
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.util.Map;

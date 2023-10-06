@@ -3,6 +3,7 @@ package model.vote;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.Map;
+import java.util.List;
 
 public class VoteLog implements Serializable {
     private String studentNumber;
@@ -11,7 +12,7 @@ public class VoteLog implements Serializable {
     private Map<Integer, Vote> votes;
 
     public VoteLog(String studentNumber, String voterName, Date voteDate, Map<Integer, Vote> votes) {
-        this.studentNumber = studentNumber;
+       this.studentNumber = studentNumber;
         this.voterName = voterName;
         this.voteDate = voteDate;
         this.votes = votes;

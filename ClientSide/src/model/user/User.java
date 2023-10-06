@@ -1,9 +1,9 @@
 package model.user;
 
+import java.io.Serializable;
 import java.rmi.RemoteException;
 import java.util.Random;
-
-public class User implements java.io.Serializable{
+public class User implements Serializable {
     private String studentNumber;
     private String password;
 
