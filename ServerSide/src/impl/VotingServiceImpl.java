@@ -71,4 +71,22 @@ public class VotingServiceImpl extends UnicastRemoteObject implements VotingServ
         voteEndDate = LocalDateTime.now();
     }
 
+    public void handleStart() {
+        startVoting();
+        System.out.println("Vote démarré.");
+    }
+
+    public void handleStop() {
+        stopVoting();
+        System.out.println("Vote arrêté.");
+    }
+
+    public void handleExit() {
+        System.out.println("Fermeture du serveur.");
+        System.exit(0);
+    }
+
+    public void handleUnknownCommand() {
+        System.out.println("Commande non reconnue.");
+    }
 }
