@@ -8,8 +8,6 @@ import java.util.List;
 public class VoteLogList {
     private static final List<VoteLog> voteLogs = new ArrayList<>();
 
-    // Le constructeur vide n'est pas nécessaire à moins que vous ne l'utilisiez pour une initialisation supplémentaire
-
     public static List<VoteLog> getVoteLogs() {
         return voteLogs;
     }

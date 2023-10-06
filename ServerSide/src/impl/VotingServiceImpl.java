@@ -60,7 +60,7 @@ public class VotingServiceImpl extends UnicastRemoteObject implements VotingServ
         Map<Integer, Vote> votes = clientStub.getVotes(CandidateList.getCandidates());
         clientStub.displayMessage("Vous avez voté pour :");
         for (Map.Entry<Integer, Vote> vote : votes.entrySet()) {
-            clientStub.displayMessage("Candidat " + vote.getKey() + " : " + vote.getValue());
+            clientStub.displayMessage("Candidate" + vote.getValue().getCandidateRank() + " avec la note " + vote.getValue().getScore());
         }
 
         // Log du vote
@@ -70,7 +70,7 @@ public class VotingServiceImpl extends UnicastRemoteObject implements VotingServ
 
         voteLogs.add(voteLog); // Ajouter le log de vote à la liste
 
-        OTPGeneratedForCurrentUser.markAsUsed();
+        OTPGeneratedForCurrentUser.markAsUsed(); // Marquer l'OTP comme utilisé
         clientStub.displayMessage("Merci d'avoir voté");
         return;
     }
@@ -83,22 +83,23 @@ public class VotingServiceImpl extends UnicastRemoteObject implements VotingServ
     public void startVoting() {
         isVotingActive = true;
         voteStartDate = LocalDateTime.now();
+        System.out.println("Vote démarré.");
         // Vous pouvez également définir voteEndDate si vous voulez une durée fixe pour le vote
     }
 
     public void stopVoting() {
         isVotingActive = false;
         voteEndDate = LocalDateTime.now();
+        System.out.println("Vote terminé.");
+        System.out.println("Votes : " + voteLogs);
     }
 
     public void handleStart() {
         startVoting();
-        System.out.println("Vote démarré.");
     }
 
     public void handleStop() {
         stopVoting();
-        System.out.println("Vote arrêté.");
     }
 
     public void handleExit() {

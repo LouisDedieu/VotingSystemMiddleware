@@ -51,35 +51,6 @@ public class AuthenticationServiceImpl extends UnicastRemoteObject implements Au
         return String.format("%06d", random.nextInt(999999));  // Génère un OTP à 6 chiffres
     }
 
-    @Override
-    public VotingStub getVotingMaterial(String otp) throws RemoteException, HasAlreadyVotedException {
-//        // Validez l'OTP avant de renvoyer le matériel de vote
-//        // Pour cet exemple, j'assume qu'un étudiant ne peut avoir qu'un seul OTP à la fois
-//        // Vous devriez avoir un moyen de récupérer le studentNumber à ce stade, peut-être via le clientStub
-//        String studentNumber = this.otpsList.getStudentNumberAssociatedWithOTP(otp);
-//
-//        if (studentNumber == null) {
-//            throw new HasAlreadyVotedException("Invalid OTP!");
-//        }
-//
-//        OTP otpObject = this.otpsList.getOTP(studentNumber);
-//
-//        if (otpObject == null || otpObject.isUsed() || !otpObject.getOtpValue().equals(otp)) {
-//            throw new HasAlreadyVotedException("Invalid OTP or already used!");
-//        }
-//
-//        // Marquez l'OTP comme utilisé pour éviter les votes multiples
-//        otpObject.markAsUsed();
-//
-//        // Renvoyez le stub de vote
-//        // Vous devez créer une instance de votre objet de vote et le retourner
-//        // Assurez-vous que cet objet est également un objet distant (RMI)
-//        VotingStub votingStub = new VotingStubImpl(RMI_PORT);
-//        return votingStub;
-        return null;
-    }
-
-
     public OTPsList getOtpsList() {
         return otpsList;
     }
