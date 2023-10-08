@@ -23,7 +23,7 @@ public class AuthenticationServiceImpl extends UnicastRemoteObject implements Au
     }
 
     @Override
-    public void authenticate(RMIClient clientStub) throws RemoteException, BadCredentialsException {
+    public void getVoteMaterial(RMIClient clientStub) throws RemoteException, BadCredentialsException {
 
         String studentNumber = clientStub.getStudentNumber();
         String password = clientStub.getPassword();

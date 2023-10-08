@@ -5,6 +5,7 @@ import model.user.User;
 public class UsersList {
     private static final User[] users = {
             new User("123", "123"),
+            new User("456", "456"),
             new User("2018-00002-MN-1", "password1"),
             new User("2018-00003-MN-2", "password2")
     };

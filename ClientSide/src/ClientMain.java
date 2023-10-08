@@ -23,7 +23,7 @@ public class ClientMain {
             }
 
             RMIClientImpl clientStub = new RMIClientImpl();
-            authService.authenticate(clientStub); // L'utilisateur est authentifié et reçoit un OTP
+            authService.getVoteMaterial(clientStub); // L'utilisateur est authentifié et reçoit un OTP
             votingService.vote(clientStub);
 
         } catch (Exception e) {

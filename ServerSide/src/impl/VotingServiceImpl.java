@@ -91,7 +91,28 @@ public class VotingServiceImpl extends UnicastRemoteObject implements VotingServ
         isVotingActive = false;
         voteEndDate = LocalDateTime.now();
         System.out.println("Vote terminé.");
-        System.out.println("Votes : " + voteLogs);
+        resultatvote();
+        System.out.println("VotesLogs : " + voteLogs);
+
+    }
+
+    private void resultatvote() {
+        System.out.println("Résultat du vote :");
+        for (Candidate candidate : candidates) {
+            System.out.println(candidate.getName() + " : " + sumVotes(candidate));
+        }
+    }
+
+    private int sumVotes(Candidate candidate) {
+        int sum = 0;
+        for (VoteLog voteLog : voteLogs) {
+            for (Map.Entry<Integer, Vote> vote : voteLog.getVotes().entrySet()) {
+                if (vote.getValue().getCandidateRank() == candidate.getRank()) {
+                    sum += vote.getValue().getScore();
+                }
+            }
+        }
+        return sum;
     }
 
     public void handleStart() {

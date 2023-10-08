@@ -52,7 +52,21 @@ public class VoteLog implements Serializable {
 
     @Override
     public String toString() {
-        return studentNumber + " " + voterName + " " + voteDate + " " + votes;
+        StringBuilder votesString = new StringBuilder();
+        for (Map.Entry<Integer, Vote> entry : votes.entrySet()) {
+            Vote vote = entry.getValue();
+            votesString.append("Candidat")
+                    .append(vote.getCandidateRank())
+                    .append(" score : ")
+                    .append(vote.getScore())
+                    .append(" ; ");
+        }
+        return "studentNumber : " + studentNumber +
+                " | voterName : " + voterName +
+                " | voteDate : " + voteDate +
+                " | votes : [" + votesString
+                + "]";
     }
+
 }
 
