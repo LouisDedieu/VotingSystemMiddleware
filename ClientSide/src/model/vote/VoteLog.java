@@ -3,7 +3,6 @@ package model.vote;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.Map;
-import java.util.List;
 
 public class VoteLog implements Serializable {
     private String studentNumber;

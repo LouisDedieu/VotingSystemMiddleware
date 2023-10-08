@@ -32,3 +32,23 @@ H
 src/model/vote/Vote.java,d\d\ddf09e177c51dee16f75731e5d3862bf8e799031
 K
 src/model/vote/VoteLog.java,d\e\de6588b37608e4835a8f16d36d36ad205fa3390c
+G
+src/model/user/OTP.java,c\8\c82a381bd366a2995384badeb0e58640c6aba233
+M
+src/utils/list/UsersList.java,d\4\d485707b64b1402408035080ef37b19f211e8679
+R
+"src/model/candidate/Candidate.java,4\8\481f1a4246ea1437b63aa7a6d078e432457a3bf6
+N
+src/model/candidate/Pitch.java,4\f\4f57706c31466c260d3ce974c3b8d5bab5d39c54
+R
+"src/model/candidate/TextPitch.java,1\e\1e348b7ea4f8a2484ea22d3d88f466b16ef158ca
+S
+#src/model/candidate/VideoPitch.java,2\8\289eb4c84a5dcccbb746eca5ea78a5acc828cc7d
+H
+src/model/user/User.java,d\b\db790d2d3254847a7813ed7ea343200da570ee76
+O
+src/utils/list/VoteLogList.java,0\d\0dbe834291e296ce7cec986bab9a7e882f351151
+F
+src/utils/Command.java,e\5\e5766626d204ad9174b26898f3501e3f1d689099
+G
+src/utils/RMIUtils.java,5\a\5a1057fd6cc21c55eac3c21edd21601a3eaf4491

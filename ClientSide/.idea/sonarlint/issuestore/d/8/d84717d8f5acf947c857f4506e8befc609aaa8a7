@@ -1,0 +1,25 @@
+
+r	java:S117Y"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğ‰óıÿÿÿÿ8Ø´¹ÿ°1
+}
+java:S1488Y"[Immediately return this expression instead of assigning it to the temporary variable "OTP".(ğ‰óıÿÿÿÿ8Û´¹ÿ°1
+~
+java:S1488a"\Immediately return this expression instead of assigning it to the temporary variable "name".(Ü°ŒŸÿÿÿÿÿ8Û´¹ÿ°1
+H
+java:S2160"+Override the "equals" method in this class.(‘Îˆü8µ¹ÿ°1
+F
+java:S1948")Make "scanner" transient or serializable.(Ù‘Ğ8Éˆ½ÿ°1
+]	java:S125"<This block of commented-out lines of code should be removed.(æ‡ìÜşÿÿÿÿ8‚¤½ÿ°1
+W	java:S125"<This block of commented-out lines of code should be removed.(¤¿„P8ß°¾ÿ°1
+G	java:S106("+Replace this use of System.out by a logger.(ÀÒĞì8¾µ¹ÿ°1
+G	java:S106/"+Replace this use of System.out by a logger.(¤Õš¬8Áµ¹ÿ°1
+L	java:S106;"+Replace this use of System.out by a logger.(øºÑûúÿÿÿÿ8Ãµ¹ÿ°1
+]
+java:S1117G";Rename "scanner" which hides the field declared at line 16.(ù ƒ‘üÿÿÿÿ8Ùˆ½ÿ°1
+L	java:S106I"+Replace this use of System.out by a logger.(È¬ë€úÿÿÿÿ8Æø»ÿ°1
+L	java:S106M"+Replace this use of System.out by a logger.(È¬ë€úÿÿÿÿ8Šœ¾ÿ°1
+]
+java:S1117W";Rename "scanner" which hides the field declared at line 16.(ù ƒ‘üÿÿÿÿ8Şˆ½ÿ°1
+G	java:S106X"+Replace this use of System.out by a logger.(‹¸¿ı8ßÉÈÿ°1
+]
+java:S1117_";Rename "scanner" which hides the field declared at line 16.(ù ƒ‘üÿÿÿÿ8àˆ½ÿ°1
+G	java:S106`"+Replace this use of System.out by a logger.(¢¾Á8âÉÈÿ°1

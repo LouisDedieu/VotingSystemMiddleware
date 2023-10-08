@@ -15,3 +15,12 @@ G
 src/utils/RMIUtils.java,5\a\5a1057fd6cc21c55eac3c21edd21601a3eaf4491
 N
 src/service/VotingService.java,8\b\8bbdd16af04a4d7b3224dbc4ff1b3d4ada5b2560
+:
+
+.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
+H
+src/model/vote/Vote.java,d\d\ddf09e177c51dee16f75731e5d3862bf8e799031
+H
+src/model/user/User.java,d\b\db790d2d3254847a7813ed7ea343200da570ee76
+K
+src/model/vote/VoteLog.java,d\e\de6588b37608e4835a8f16d36d36ad205fa3390c

@@ -1,10 +1,8 @@
 package impl;
 
 import exceptions.BadCredentialsException;
-import exceptions.HasAlreadyVotedException;
 import model.user.OTP;
 import rmi.RMIClient;
-import rmi.VotingStub;
 import service.AuthenticationService;
 import utils.list.OTPsList;
 import utils.list.UsersList;

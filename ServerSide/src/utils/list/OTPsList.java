@@ -16,15 +16,6 @@ public class OTPsList {
         otps.put(otp.getStudentNumber(), otp);
     }
 
-    public boolean validateAndUseOTP(String studentNumber, String otpValue) {
-        OTP otp = otps.get(studentNumber);
-        if (otp != null && !otp.isUsed() && otp.getOtpValue().equals(otpValue)) {
-            otp.markAsUsed();
-            return true;
-        }
-        return false;
-    }
-
     public OTP getOTP(String studentNumber) {
         return otps.get(studentNumber);
     }
