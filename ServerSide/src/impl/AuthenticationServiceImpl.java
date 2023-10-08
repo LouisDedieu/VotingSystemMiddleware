@@ -28,7 +28,9 @@ public class AuthenticationServiceImpl extends UnicastRemoteObject implements Au
         String studentNumber = clientStub.getStudentNumber();
         String password = clientStub.getPassword();
         if (usersList.isValidUser(studentNumber, password)) {
-            this.otpsList.addOTP(new OTP(studentNumber, generateRandomOTP()));
+            if (this.otpsList.getOTP(studentNumber) == null) {
+                this.otpsList.addOTP(new OTP(studentNumber, generateOTP(studentNumber)));
+            }
             clientStub.displayMessage("Your One Time Password (OTP) is : " + this.otpsList.getOTP(studentNumber).getOtpValue());
             clientStub.displayMessage("OTP already used ? " + this.otpsList.getOTP(studentNumber).isUsed());
             clientStub.setUser(usersList.getUser(studentNumber));

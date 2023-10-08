@@ -1,7 +1,3 @@
 
 G	java:S106"+Replace this use of System.out by a logger.(æÜÂ”8â¶•÷¯1
-L	java:S106$"+Replace this use of System.out by a logger.(º§ùüÿÿÿÿ8æ¶•÷¯1
-L	java:S106("+Replace this use of System.out by a logger.(¬×©øÿÿÿÿ8ç¶•÷¯1
-L	java:S106*"+Replace this use of System.out by a logger.(×¦õùÿÿÿÿ8ç¶•÷¯1
-L	java:S106-"+Replace this use of System.out by a logger.(„÷Ïóøÿÿÿÿ8ª›¥÷¯1
-L	java:S1062"+Replace this use of System.err by a logger.(ôŒÇ´ÿÿÿÿÿ8è¶•÷¯1
+L	java:S106,"+Replace this use of System.err by a logger.(ôŒÇ´ÿÿÿÿÿ8è¶•÷¯1

@@ -1,4 +1,6 @@
 
-L	java:S106"+Replace this use of System.out by a logger.(°Á¢úÿÿÿÿ8•‚ßø¯1
-G	java:S106"+Replace this use of System.out by a logger.(•¬éµ8–‚ßø¯1
-L	java:S106"+Replace this use of System.err by a logger.(‡ê˜Ëøÿÿÿÿ8—‚ßø¯1
+{
+java:S2142"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(”ı¾8üËˆ©°1
+L	java:S106"+Replace this use of System.out by a logger.(°Á¢úÿÿÿÿ8ƒÌˆ©°1
+G	java:S106"+Replace this use of System.out by a logger.(•¬éµ8“Ìˆ©°1
+L	java:S106"+Replace this use of System.err by a logger.(‡ê˜Ëøÿÿÿÿ8˜Ìˆ©°1

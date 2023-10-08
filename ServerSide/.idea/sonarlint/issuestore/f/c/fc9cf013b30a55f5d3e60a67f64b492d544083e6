@@ -1,14 +1,9 @@
 
 H
-java:S2160"+Override the "equals" method in this class.(›Ğœà8Ş±Åù¯1
+java:S2160"+Override the "equals" method in this class.(›Ğœà8ÉÇú§°1
 H
-java:S1948"+Make "usersList" transient or serializable.(¢¥Ñ¿8ß±Åù¯1
+java:S1948"+Make "usersList" transient or serializable.(¢¥Ñ¿8§éàú°1
 G
-java:S1948"*Make "otpsList" transient or serializable.(ˆ„æ8ß±Åù¯1
+java:S1948"*Make "otpsList" transient or serializable.(ˆ„æ8¨éàú°1
 :
-java:S21193"Save and re-use this "Random".(¼İÅf8ê±Åù¯1
-X	java:S125<"<This block of commented-out lines of code should be removed.(û¦ş–8ë±Åù¯1
-O
-java:S1135?"2Complete the task associated to this TODO comment.(ïÌ•Ø8ë±Åù¯1
-D
-java:S1128"'Remove this unused import 'model.User'.(˜Ğ ñ8ì±Åù¯1
+java:S21192"Save and re-use this "Random".(¼İÅf8äÇú§°1

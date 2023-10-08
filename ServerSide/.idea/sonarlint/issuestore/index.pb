@@ -1,14 +1,10 @@
 
 I
 src/utils/DataLoader.java,7\d\7d9e8b10480322e3a038e561a9d29d311fe7d551
-H
-src/model/Candidate.java,f\f\ffe9b25cf85d5dff7b729792845672f45b506e11
 [
 +src/exceptions/BadCredentialsException.java,1\2\12417a5bc7fda09130c984c845a8f1c380d13420
 \
 ,src/exceptions/HasAlreadyVotedException.java,9\f\9f95226e8428a4edc340713b2923036323f6dd32
-C
-src/model/User.java,9\3\930b2c1d08ecb8339873c37ba0b6957548b40e4c
 C
 src/ServerMain.java,8\e\8eaf943b07deebd0f08b7ebeda3dddbc2cc56a31
 F
@@ -28,11 +24,11 @@ L
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
-H
-src/utils/UsersList.java,3\5\35fd5ff2621d26adb64d519fff0e7c8034de4890
+Q
+!src/utils/list/CandidateList.java,c\2\c244b9b2b7702dd0987d7b6ecb6a5d83ef1755c6
 L
-src/utils/CandidateList.java,c\4\c432a41d14867be427d12a5bb388de8900da218e
-B
-src/model/OTP.java,c\5\c59405dd7f66fbdf0cb0ef356803d7193a2819f1
-G
-src/utils/OTPsList.java,f\2\f2d519a6d343dec5279a8f924207348614f48594
+src/utils/list/OTPsList.java,c\f\cf651db3f84db09860d70c1bfe5277346f53926c
+H
+src/model/vote/Vote.java,d\d\ddf09e177c51dee16f75731e5d3862bf8e799031
+K
+src/model/vote/VoteLog.java,d\e\de6588b37608e4835a8f16d36d36ad205fa3390c

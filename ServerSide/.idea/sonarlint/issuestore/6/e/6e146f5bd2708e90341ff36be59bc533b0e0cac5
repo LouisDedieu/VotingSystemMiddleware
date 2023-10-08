@@ -1,11 +1,18 @@
 
-m	java:S117%"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æËÛÕ8şŸÜù¯1
-r	java:S117&"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰é£ıÿÿÿÿ8ÿŸÜù¯1
+m	java:S1170"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æËÛÕ8ôšèú°1
+r	java:S1171"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰é£ıÿÿÿÿ8öšèú°1
 H
-java:S2160"+Override the "equals" method in this class.(ÌæÅ8ˆ Üù¯1
+java:S2160"+Override the "equals" method in this class.(ÌæÅ8à›èú°1
 y
-java:S1450"\Remove the "voteStartDate" field and declare it as a local variable in the relevant methods.(ÌÄ‚Ì8‰ Üù¯1
-r
-java:S2159("VRemove this call to "equals"; comparisons between unrelated types always return false.(‘–ùb8Œ Üù¯1
+java:S1450"\Remove the "voteStartDate" field and declare it as a local variable in the relevant methods.(ÌÄ‚Ì8ã›èú°1
+8
+java:S3626K"Remove this redundant jump.(ûÁİ…8ñ›èú°1
+L	java:S106V"+Replace this use of System.out by a logger.(º§ùüÿÿÿÿ8æúÂ¨°1
+L	java:S106]"+Replace this use of System.out by a logger.(‰òµÜÿÿÿÿÿ8çúÂ¨°1
+G	java:S106^"+Replace this use of System.out by a logger.(‹éÏŠ8—œèú°1
+L	java:S106j"+Replace this use of System.out by a logger.(×¦õùÿÿÿÿ8œœèú°1
+L	java:S106o"+Replace this use of System.out by a logger.(„÷Ïóøÿÿÿÿ8Ÿœèú°1
 N
-java:S1068"1Remove this unused "voteStartDate" private field.(ÌÄ‚Ì8 Üù¯1
+java:S1068"1Remove this unused "voteStartDate" private field.(ÌÄ‚Ì8¡œèú°1
+K
+java:S1068".Remove this unused "candidates" private field.(øÇôĞ8¡œèú°1
