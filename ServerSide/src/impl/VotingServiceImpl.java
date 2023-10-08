@@ -106,8 +106,8 @@ public class VotingServiceImpl extends UnicastRemoteObject implements VotingServ
         }
     }
 
-    private int sumVotes(Candidate candidate) {
-        int sum = 0;
+    private float sumVotes(Candidate candidate) {
+        float sum = 0;
         for (VoteLog voteLog : voteLogs) {
             for (Map.Entry<Integer, Vote> vote : voteLog.getVotes().entrySet()) {
                 if (vote.getValue().getCandidateRank() == candidate.getRank()) {
@@ -115,7 +115,8 @@ public class VotingServiceImpl extends UnicastRemoteObject implements VotingServ
                 }
             }
         }
-        return sum;
+        //retourne la moyenne
+        return sum/voteLogs.size();
     }
 
     public void handleStart() {

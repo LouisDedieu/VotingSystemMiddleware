@@ -25,18 +25,17 @@ public class AuthenticationServiceImpl extends UnicastRemoteObject implements Au
     @Override
     public void getVoteMaterial(RMIClient clientStub) throws RemoteException, BadCredentialsException {
 
-        String studentNumber = clientStub.getStudentNumber();
-        String password = clientStub.getPassword();
+        String studentNumber = clientStub.askStudentNumber();
+        String password = clientStub.askPassword();
         if (usersList.isValidUser(studentNumber, password)) {
             if (this.otpsList.getOTP(studentNumber) == null) {
                 this.otpsList.addOTP(new OTP(studentNumber, generateOTP(studentNumber)));
             }
-            clientStub.displayMessage("Your One Time Password (OTP) is : " + this.otpsList.getOTP(studentNumber).getOtpValue());
-            clientStub.displayMessage("OTP already used ? " + this.otpsList.getOTP(studentNumber).isUsed());
+            clientStub.displayMessage("Votre One Time Password (OTP) est : " + this.otpsList.getOTP(studentNumber).getOtpValue());
             clientStub.setUser(usersList.getUser(studentNumber));
-            clientStub.displayMessage("You are successfully authenticated!");
+            clientStub.displayMessage("Vous etes connecte");
         } else {
-            throw new BadCredentialsException("Invalid credentials!");
+            throw new BadCredentialsException("Mauvais identifiants");
         }
     }
 

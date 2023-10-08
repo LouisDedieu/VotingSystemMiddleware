@@ -13,15 +13,16 @@ public class RMIClientImpl extends UnicastRemoteObject implements RMIClient {
     private String studentNumber;
     private String password;
     private User user;
+    private Scanner scanner;
 
     public RMIClientImpl() throws RemoteException {
-        Scanner scanner = new Scanner(System.in);
+        scanner = new Scanner(System.in);
 
-        System.out.print("Enter your student number: ");
-        studentNumber = scanner.nextLine();
+//        System.out.print("Enter your student number: ");
+//        studentNumber = scanner.nextLine();
 
-        System.out.print("Enter your password: ");
-        password = scanner.nextLine();
+//        System.out.print("Enter your password: ");
+//        password = scanner.nextLine();
     }
 
     @Override
@@ -31,6 +32,20 @@ public class RMIClientImpl extends UnicastRemoteObject implements RMIClient {
 
     @Override
     public String getPassword() throws RemoteException {
+        return password;
+    }
+
+    @Override
+    public String askStudentNumber() throws RemoteException {
+        System.out.print("Enter your student number: ");
+        studentNumber = scanner.nextLine();
+        return studentNumber;
+    }
+
+    @Override
+    public String askPassword() throws RemoteException {
+        System.out.print("Enter your password: ");
+        password = scanner.nextLine();
         return password;
     }
 

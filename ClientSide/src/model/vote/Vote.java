@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class Vote implements Serializable {
     private int candidateRank;
-    private int score;
+    private float score;
 
 
     public Vote(int candidateRank, int score) {
@@ -16,7 +16,7 @@ public class Vote implements Serializable {
         return candidateRank;
     }
 
-    public int getScore() {
+    public float getScore() {
         return score;
     }
 
@@ -24,7 +24,7 @@ public class Vote implements Serializable {
         this.candidateRank = candidateRank;
     }
 
-    public void setScore(int score) {
+    public void setScore(float score) {
         this.score = score;
     }
 
