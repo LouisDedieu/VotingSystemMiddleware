@@ -71,8 +71,11 @@ public class VotingServiceImpl extends UnicastRemoteObject implements VotingServ
         voteLogs.add(voteLog); // Ajouter le log de vote à la liste
 
         OTPGeneratedForCurrentUser.markAsUsed(); // Marquer l'OTP comme utilisé
+
+        //Affichage des résultats côté server
+        System.out.println("Résultats du vote :");
+        resultatvote();
         clientStub.displayMessage("Merci d'avoir voté");
-        return;
     }
 
     @Override
@@ -91,13 +94,13 @@ public class VotingServiceImpl extends UnicastRemoteObject implements VotingServ
         isVotingActive = false;
         voteEndDate = LocalDateTime.now();
         System.out.println("Vote terminé.");
+        System.out.println("Résultats finaux du vote :");
         resultatvote();
         System.out.println("VotesLogs : " + voteLogs);
 
     }
 
     private void resultatvote() {
-        System.out.println("Résultat du vote :");
         for (Candidate candidate : candidates) {
             System.out.println(candidate.getName() + " : " + sumVotes(candidate));
         }
